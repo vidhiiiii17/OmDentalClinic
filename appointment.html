@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Booking - Om Dental Clinic</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+    }
+    .appointment-section {
+      background-color: rgb(4, 105, 105);
+      padding: 30px;
+      border-radius: 8px;
+      color: blanchedalmond;
+    }
+    .form-control {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 10px;
+    }
+    .form-label {
+      font-weight: bold;
+    }
+    .appointment-section h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .appointment-btn {
+      background-color: #0066cc;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .appointment-btn:hover {
+      background-color: #005bb5;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+  <style>
+    .btn-custom {
+      background-color: #001416; /* Green color, change this to any color you prefer */
+      color: white;
+      border: none;
+    }
+  
+    .btn-custom:hover {
+      background-color: #012d31; /* Darker green for hover */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; background-color: rgb(1, 31, 31);">
+    <nav>
+      <div class="container" style="justify-content: left; width: 100px;">
+        <a class="navbar-brand" href="#">
+          <img src="./WhatsApp Image 2025-04-04 at 23.50.30_5eef6632.jpg" alt="Om Dental Clinic Logo" width="100" height="60">
+          <h2 style="color: blanchedalmond;">Om Dental Clinic</h2>
+        </a>
+      </div>
+    </nav>
+    <ul class="nav justify-content-center" style="width: 5000px; margin-top: 30px;">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" style="color: blanchedalmond;" href="./index.html"><h5>Home</h5></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" style="color: blanchedalmond;" href="./About.html">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: blanchedalmond;" href="./contact.html">Contact us</a>
+      </li>
+    </ul>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="width: 775px; height: 40px; margin-top: 37px; margin-right: 7px;">
+      <a class="nav-link" style="color: blanchedalmond;" href="#">Book Appointment</a>
+    </div>
+  </div>
+  <div class="container my-5 appointment-section">
+    <h2>Book Your Appointment</h2>
+    <form action="/submit-appointment" method="POST">
+      <div class="form-group">
+        <label for="name" class="form-label"><i class="fas fa-user"></i> Full Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone" class="form-label"><i class="fas fa-phone"></i> Phone Number</label>
+        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="date" class="form-label"><i class="fas fa-calendar-day"></i> Preferred Appointment Date</label>
+        <input type="date" class="form-control" id="date" name="date" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="time" class="form-label"><i class="fas fa-clock"></i> Preferred Time</label>
+        <input type="time" class="form-control" id="time" name="time" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="message" class="form-label"><i class="fas fa-comment-alt"></i> Message (Optional)</label>
+        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Any additional information"></textarea>
+      </div>
+      <button type="submit" class="btn btn-custom btn-lg btn-block" style="border-radius: 25px; padding: 10px 20px; font-weight: bold; font-size: 18px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+        <i class="fas fa-check-circle"></i> Submit Appointment
+      </button>
+    </form>
+  </div>
+
+  <hr>
+
+  <div style="width: 1351px; height: 300px; background-color: rgb(1, 31, 31); display: flex; justify-content: space-evenly; color: blanchedalmond;">
+    <div>
+      <img src="./clinic.jpg" class="card-img-top" height="300" width="100">
+    </div>
+    <div style="font-size: large; justify-content: center; margin-top: 75px;">
+      <h1>Pages</h1>
+      <li><a style="color: blanchedalmond;" href="./OmClinic.html">Home</a></li>
+      <li><a style="color: blanchedalmond;" href="./About.html">About Us</a></li>
+      <li><a style="color: blanchedalmond;" href="./contact.html">Contact Us</a></li>
+    </div>
+    <div style="margin-top: 75px;">
+      <h1><i class="fas fa-phone-alt"></i> Contact Us</h1>
+      <p><i class="fas fa-map-marker-alt"></i> Address: Haripura, Main Road, Vyara-394 650, Dist. Tapi</p>
+      <p><i class="fas fa-phone"></i> Ph: 02626-223813</p>
+      <a style="color: blanchedalmond;" href="https://maps.app.goo.gl/Zjs8QN5pD4GrApHQ7?g_st=com.google.maps.preview.copy"><i class="fas fa-directions"></i> Directions</a>
+    </div>  
+  </div>
+</body>
+</html>
